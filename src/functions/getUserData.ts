@@ -1,7 +1,6 @@
 import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import { toast } from "react-toastify";
 
 function getAuthUserData() {
   return new Promise((resolve, reject) => {
@@ -20,7 +19,6 @@ function getAuthUserData() {
         return data;
       } else {
         reject(new Error("user is not authenticated"));
-      
       }
       unsubscribe();
     });

@@ -20,9 +20,7 @@ function getAuthUserData() {
         return data;
       } else {
         reject(new Error("user is not authenticated"));
-        toast("user is not authenticated", {
-          type: "error",
-        });
+      
       }
       unsubscribe();
     });

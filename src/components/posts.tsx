@@ -1,6 +1,6 @@
 import { ReactNode, memo } from "react";
 import { PostType } from "../types";
-import Post from "./post";
+import Post from "./Post";
 import { BeatLoader } from "react-spinners";
 import { QueryKey } from "react-query";
 type Props = {

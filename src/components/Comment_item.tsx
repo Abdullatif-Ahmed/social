@@ -14,12 +14,12 @@ import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import useOptimisticUpdate from "../lib/react query/useOptimisticUpdate";
 import { db } from "../firebase";
-import CreateComment from "./create comment";
+import CreateComment from "./Create_comment";
 import useQueryHandler from "../lib/react query/useQuery";
-import ProfileImg from "./profile img";
+import ProfileImg from "./Profile_img";
 import useAuthUser from "../hooks/useAuthUser";
 import { toast } from "react-toastify";
-import ReadMore from "./readMore";
+import ReadMore from "./Read_more";
 import { QueryKey } from "react-query";
 const CommentItem = memo(function CommentItem({
   data,

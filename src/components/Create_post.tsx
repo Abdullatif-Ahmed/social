@@ -1,9 +1,9 @@
 import { memo, useCallback, useState } from "react";
 
 import { IoImages, IoLink } from "react-icons/io5";
-import PostModel from "./post model";
-import ProfileImg from "./profile img";
-import Model from "./model";
+import PostModel from "./Post_model";
+import ProfileImg from "./Profile_img";
+import Model from "./Model";
 import { PostTypeCases } from "../types";
 import useAuthUser from "../hooks/useAuthUser";
 const CreatePost = memo(function CreatePost({

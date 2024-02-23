@@ -11,7 +11,7 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { db } from "../firebase";
-import UploadImg from "./uploadImg";
+import UploadImg from "./Upload_img";
 import useUploadImg from "../hooks/useUploadImg";
 import useAuthUser from "../hooks/useAuthUser";
 import { QueryKey } from "react-query";

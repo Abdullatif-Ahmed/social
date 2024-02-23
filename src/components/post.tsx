@@ -24,19 +24,19 @@ import ReactPlayer from "react-player";
 
 import { useState } from "react";
 import useQueryHandler from "../lib/react query/useQuery";
-import CreateComment from "./create comment";
+import CreateComment from "./Create_comment";
 import useOptimisticUpdate from "../lib/react query/useOptimisticUpdate";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
-import PostModel from "./post model";
-import ProfileImg from "./profile img";
-import Model from "./model";
+import PostModel from "./Post_model";
+import ProfileImg from "./Profile_img";
+import Model from "./Model";
 import { SlUserFollow, SlUserUnfollow } from "react-icons/sl";
 import useFollow from "../hooks/useFollow";
 import useAuthUser from "../hooks/useAuthUser";
 import { QueryKey } from "react-query";
-import Comments from "./comments";
+import Comments from "./Comments";
 import { toast } from "react-toastify";
-import ReadMore from "./readMore";
+import ReadMore from "./Read_more";
 import LazyLoad from "react-lazy-load";
 
 type Props = {

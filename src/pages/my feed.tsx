@@ -6,7 +6,7 @@ import { memo } from "react";
 import Posts from "../components/posts";
 import useAuthUser from "../hooks/useAuthUser";
 import followings from "../assets/followings.svg";
-import EmptyUi from "../components/emptyUi";
+import EmptyUi from "../components/Empty_ui";
 import { useErrorBoundary } from "react-error-boundary";
 const MyFeed = memo(function MyFeed() {
   const { data: user } = useAuthUser();

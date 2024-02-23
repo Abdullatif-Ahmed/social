@@ -4,10 +4,10 @@ import { PostType } from "../types";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../firebase";
 import Posts from "../components/posts";
-import CreatePost from "../components/create post";
+import CreatePost from "../components/Create_post";
 import useAuthUser from "../hooks/useAuthUser";
 import noPosts from "../assets/post.svg";
-import EmptyUi from "../components/emptyUi";
+import EmptyUi from "../components/Empty_ui";
 import { useErrorBoundary } from "react-error-boundary";
 import { memo } from "react";
 const ProfilePosts = memo(() => {

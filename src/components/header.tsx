@@ -3,10 +3,10 @@ import { IoLogOutOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
-import ProfileImg from "./profile img";
+import ProfileImg from "./Profile_img";
 import useAuthUser from "../hooks/useAuthUser";
 import { MdComputer, MdDarkMode, MdLightMode } from "react-icons/md";
-import DropDown from "./dropDown";
+import DropDown from "./Drop_down";
 import useEditAuthUser from "../hooks/useEditAuthUser";
 import logo from "../assets/project logo.webp";
 const Header = memo(() => {

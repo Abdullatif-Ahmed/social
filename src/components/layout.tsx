@@ -1,14 +1,13 @@
 import { Navigate, Outlet, useLocation, useNavigate } from "react-router-dom";
-import Header from "./header";
-import LeftSidebar from "./left sidebar";
-import RightSidebar from "./right sidebar";
-import MobileNav from "./mobileNav";
+import Header from "./Header";
+import LeftSidebar from "./Left_sidebar";
+import MobileNav from "./Mobile_nav";
 import useAuthUser from "../hooks/useAuthUser";
-import Model from "./model";
+import Model from "./Model";
 import SuccessfulSigned from "../assets/Successful Registration.svg";
 import { ErrorBoundary } from "react-error-boundary";
-import errorFallback from "../functions/errorFallback";
-import Loading from "./loading";
+import errorFallback from "./Error_fallback";
+import Loading from "./Loading";
 function Layout() {
   const { data: user, isLoading } = useAuthUser();
   const { pathname, state } = useLocation();
@@ -30,7 +29,9 @@ function Layout() {
               <Outlet />
             </ErrorBoundary>
           </section>
-          {!pathname.match(/profile/) && <RightSidebar />}
+          {!pathname.match(/profile/) && (
+            <aside className="side-bar md:w-[calc(20%-1.25rem/2)] min-[900px]:w-[calc(35%-1.25rem)]"></aside>
+          )}
         </main>
 
         {state?.newUser && (

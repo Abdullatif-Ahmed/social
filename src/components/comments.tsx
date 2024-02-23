@@ -2,7 +2,7 @@ import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import useQueryHandler from "../lib/react query/useQuery";
 import { CommentType, PostType } from "../types";
 import { BeatLoader } from "react-spinners";
-import CommentItem from "./comment item";
+import CommentItem from "./Comment_item";
 import { db } from "../firebase";
 import { QueryKey } from "react-query";
 import { memo } from "react";

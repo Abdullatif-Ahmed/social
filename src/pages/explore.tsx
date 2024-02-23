@@ -6,7 +6,7 @@ import { db } from "../firebase";
 
 import { PostType } from "../types";
 import { memo } from "react";
-import CreatePost from "../components/create post";
+import CreatePost from "../components/Create_post";
 import Posts from "../components/posts";
 import { useErrorBoundary } from "react-error-boundary";
 

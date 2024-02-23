@@ -6,7 +6,7 @@ import { db } from "../firebase";
 import Posts from "../components/posts";
 import useAuthUser from "../hooks/useAuthUser";
 import like from "../assets/like.svg";
-import EmptyUi from "../components/emptyUi";
+import EmptyUi from "../components/Empty_ui";
 import { useErrorBoundary } from "react-error-boundary";
 const Liked = memo(function Liked() {
   const { data: user } = useAuthUser();

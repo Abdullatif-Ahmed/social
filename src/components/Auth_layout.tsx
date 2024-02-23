@@ -2,7 +2,7 @@ import { Navigate, Outlet, useLocation } from "react-router-dom";
 import logo from "../assets/logo.webp";
 
 import useAuthUser from "../hooks/useAuthUser";
-import Loading from "./loading";
+import Loading from "./Loading";
 
 function AuthLayout() {
   const { pathname, state } = useLocation();

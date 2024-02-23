@@ -1,17 +1,17 @@
 import { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-const Layout = lazy(() => import("./components/layout"));
-const AuthLayout = lazy(() => import("./components/authLayout"));
+const Layout = lazy(() => import("./components/Layout"));
+const AuthLayout = lazy(() => import("./components/Auth_layout"));
 
-const Explore = lazy(() => import("./pages/explore"));
-const Profile = lazy(() => import("./pages/profile"));
-const Login = lazy(() => import("./pages/login"));
-const SignUp = lazy(() => import("./pages/signUp"));
-const Liked = lazy(() => import("./pages/liked"));
-const Saved = lazy(() => import("./pages/saved"));
-const MyFeed = lazy(() => import("./pages/my feed"));
-const ProfilePosts = lazy(() => import("./pages/profile posts"));
-const ProfileImages = lazy(() => import("./pages/profile images"));
+const Explore = lazy(() => import("./pages/Explore"));
+const Profile = lazy(() => import("./pages/Profile"));
+const Login = lazy(() => import("./pages/Login"));
+const SignUp = lazy(() => import("./pages/SignUp"));
+const Liked = lazy(() => import("./pages/Liked"));
+const Saved = lazy(() => import("./pages/Saved"));
+const MyFeed = lazy(() => import("./pages/My feed"));
+const ProfilePosts = lazy(() => import("./pages/Profile posts"));
+const ProfileImages = lazy(() => import("./pages/Profile images"));
 
 import en from "javascript-time-ago/locale/en.json";
 import TimeAgo from "javascript-time-ago";
@@ -21,8 +21,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Error404 from "./pages/404";
 import { ErrorBoundary } from "react-error-boundary";
-import errorFallback from "./functions/errorFallback";
-import Loading from "./components/loading";
+import ErrorFallback from "./components/Error_fallback";
+import Loading from "./components/Loading";
 
 TimeAgo.addDefaultLocale(en);
 
@@ -41,7 +41,7 @@ function App() {
   }, [user?.themeMode]);
 
   return (
-    <ErrorBoundary fallbackRender={errorFallback}>
+    <ErrorBoundary fallbackRender={ErrorFallback}>
       <BrowserRouter>
         <Routes>
           <Route

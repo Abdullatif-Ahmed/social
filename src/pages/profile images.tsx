@@ -5,7 +5,7 @@ import useQueryHandler from "../lib/react query/useQuery";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../firebase";
 import noPhotos from "../assets/image post.svg";
-import EmptyUi from "../components/emptyUi";
+import EmptyUi from "../components/Empty_ui";
 import { useErrorBoundary } from "react-error-boundary";
 import { memo } from "react";
 const ProfileImages = memo(() => {

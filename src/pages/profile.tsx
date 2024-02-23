@@ -4,7 +4,7 @@ import { USER } from "../types";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { BeatLoader } from "react-spinners";
-import ProfileImg from "../components/profile img";
+import ProfileImg from "../components/Profile_img";
 import { RiPencilFill } from "react-icons/ri";
 import { useRef, useState } from "react";
 import useUploadImg from "../hooks/useUploadImg";
@@ -12,12 +12,12 @@ import { BsCameraFill } from "react-icons/bs";
 import { PiUploadSimpleLight } from "react-icons/pi";
 import { SlUserFollow, SlUserUnfollow } from "react-icons/sl";
 import profileBg from "../assets/profileBg.webp";
-import Model from "../components/model";
-import UploadImg from "../components/uploadImg";
+import Model from "../components/Model";
+import UploadImg from "../components/Upload_img";
 import useFollow from "../hooks/useFollow";
 import useAuthUser from "../hooks/useAuthUser";
 import useEditAuthUser from "../hooks/useEditAuthUser";
-import EditInput from "../components/editInput";
+import EditInput from "../components/Edit_input";
 
 function Profile() {
   const { id } = useParams();

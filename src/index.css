@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&family=Rubik:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  #root {
+    font-family: "Rubik", sans-serif;
+    @apply min-h-screen bg-light-bg dark:bg-dark-bg text-light-textColor dark:text-dark-textColor;
+  }
+  body {
+    @apply relative;
+  }
+  input:focus-visible {
+    outline: none;
+  }
+  button {
+    @apply disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-light-bg dark:bg-dark-bg;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply rounded bg-slate-300 dark:bg-zinc-800;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+@layer components {
+  .inp {
+    @apply text-gray-500 text-sm font-normal h-9  px-3 rounded-[4px] bg-slate-50 border border-slate-500 [&:not(.error)]:focus:outline [&:not(.error)]:focus:outline-2 [&:not(.error)]:focus:outline-primary-effect [&.error]:outline [&.error]:outline-1 [&.error]:outline-red-600;
+  }
+  .btn-submit {
+    @apply bg-primary px-6 py-2 rounded-xl capitalize text-white font-medium [&:not(:disabled)]:hover:bg-primary-effect;
+  }
+  .error-msg {
+    @apply text-red-600 bg-slate-800 px-2 py-1 rounded-sm text-sm;
+  }
+  .nav-link {
+    @apply md:sh flex items-center capitalize font-normal px-4 py-3 [&:not(.active)]:hover:bg-slate-200 dark:[&:not(.active)]:hover:bg-[#232632] [&:not(.active)]:hover:text-primary-effect max-md:[li:first-child_&]:rounded-tl-mobileNav max-md:[li:last-child_&]:rounded-tr-mobileNav md:rounded transition-colors [&.active]:bg-slate-200 dark:[&.active]:bg-[#232632] [&.active]:text-primary-effect;
+  }
+  .side-bar {
+    @apply h-navH sticky top-headerH py-6 hidden md:block overflow-y-auto;
+  }
+  .sh {
+    @apply shadow-md dark:shadow-[#070b14] shadow-gray-300;
+  }
+  .overlay {
+    @apply inset-0 absolute z-[999] h-full bg-light-bg/70 dark:bg-dark-bg/70;
+  }
+}
+.LazyLoad {
+  @apply bg-slate-200 dark:bg-gray-800;
+}
